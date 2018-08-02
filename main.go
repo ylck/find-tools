@@ -1,7 +1,7 @@
 package main
 
 import (
-	"user/cmd"
+	"github.com/ylck/find-tools/cmd"
 )
 
 func main() {
