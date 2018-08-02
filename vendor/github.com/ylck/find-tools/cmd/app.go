@@ -10,7 +10,7 @@ import (
 	"github.com/termie/go-shutil"
 )
 
-var src, tar, suffix string
+var src, tar, suffix, strRet string
 
 var RootCmd = &cobra.Command{
 	Use: "app",
@@ -45,7 +45,6 @@ func copyfile(src_dir, tar_dir, suffix string) {
 	var listfile []string
 	//os.Getenv("dir")
 	ostype := os.Getenv("GOOS") // 获取系统类型
-	var strRet string
 	if ostype == "windows" {
 		strRet = "\\"
 	} else if ostype == "linux" || ostype == "darwin" {
