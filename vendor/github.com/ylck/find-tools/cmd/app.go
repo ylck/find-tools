@@ -70,6 +70,7 @@ func copyfile(src_dir, tar_dir, suffix string) {
 		log.Info(a)
 		new_filename := filepath.Base(a)
 		err := shutil.CopyFile(string(a), tar_dir+strRet+new_filename, false)
+		log.Info(tar_dir + strRet + new_filename)
 		if err != nil {
 			log.Error(err)
 		}
