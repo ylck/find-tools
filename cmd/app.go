@@ -1,12 +1,13 @@
 package cmd
 
 import (
-	log "github.com/sirupsen/logrus"
-	"github.com/spf13/cobra"
-	"github.com/termie/go-shutil"
 	"os"
 	"path/filepath"
 	"strings"
+
+	log "github.com/sirupsen/logrus"
+	"github.com/spf13/cobra"
+	"github.com/termie/go-shutil"
 )
 
 var src, tar, suffix string
@@ -29,7 +30,7 @@ Echo works a lot like print, except it has a child command.`,
 func init() {
 	RootCmd.PersistentFlags().StringVar(&src, "src", "C:\\code\\src\\user\\cmd", "Author name for copyright attribution")
 	RootCmd.PersistentFlags().StringVar(&tar, "tar", "C:\\test", "Author name for copyright attribution")
-	RootCmd.PersistentFlags().StringVar(&tar, "suffix", ".g", "Author name for copyright attribution")
+	RootCmd.PersistentFlags().StringVar(&suffix, "suffix", ".g", "Author name for copyright attribution")
 
 	// 两个顶层的命令，和一个cmdEcho命令下的子命令cmdTimes
 	RootCmd.AddCommand(cmdCopy)
