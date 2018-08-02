@@ -51,9 +51,11 @@ func copyfile(src_dir, tar_dir, suffix string) {
 
 		//fmt.Println("file:", info.Name(), "in directory:", path)
 		ok := strings.HasSuffix(path, suffix)
+
 		if ok {
 			listfile = append(listfile, path)
-			println("Golang file", path)
+			println(suffix+"  file", path)
+			log.Info(suffix, "11111", tar_dir)
 		}
 		return nil
 	})
