@@ -61,7 +61,7 @@ func copyfile(src_dir, tar_dir, suffix string) {
 
 		if ok {
 			listfile = append(listfile, path)
-			log.Info(suffix+"  file", path)
+			println(suffix+"  file", path)
 		}
 		return nil
 	})
