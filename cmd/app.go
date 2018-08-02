@@ -44,6 +44,13 @@ func Run() {
 func copyfile(src_dir, tar_dir, suffix string) {
 	var listfile []string
 	//os.Getenv("dir")
+	ostype := os.Getenv("GOOS") // 获取系统类型
+	var strRet string
+	if ostype == "windows" {
+		strRet = "\\"
+	} else if ostype == "linux" || ostype == "darwin" {
+		strRet = "/"
+	}
 	filepath.Walk(src_dir, func(path string, info os.FileInfo, err error) error {
 		if info.IsDir() {
 			return nil
@@ -55,7 +62,6 @@ func copyfile(src_dir, tar_dir, suffix string) {
 		if ok {
 			listfile = append(listfile, path)
 			println(suffix+"  file", path)
-			log.Info(suffix, "11111", tar_dir)
 		}
 		return nil
 	})
@@ -63,7 +69,7 @@ func copyfile(src_dir, tar_dir, suffix string) {
 	for _, a := range listfile {
 		log.Info(a)
 		new_filename := filepath.Base(a)
-		err := shutil.CopyFile(string(a), tar_dir+"\\"+new_filename, false)
+		err := shutil.CopyFile(string(a), tar_dir+strRet+new_filename, false)
 		if err != nil {
 			log.Error(err)
 		}
