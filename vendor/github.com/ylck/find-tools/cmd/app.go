@@ -51,7 +51,6 @@ func copyfile(src_dir, tar_dir, suffix string) {
 	} else if ostype == "linux" || ostype == "darwin" {
 		strRet = "/"
 	}
-	log.Info(strRet)
 	filepath.Walk(src_dir, func(path string, info os.FileInfo, err error) error {
 		if info.IsDir() {
 			return nil
@@ -71,7 +70,6 @@ func copyfile(src_dir, tar_dir, suffix string) {
 		log.Info(a)
 		new_filename := filepath.Base(a)
 		err := shutil.CopyFile(string(a), tar_dir+strRet+new_filename, false)
-		log.Info(tar_dir + strRet + new_filename)
 		if err != nil {
 			log.Error(err)
 		}
