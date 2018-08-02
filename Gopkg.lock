@@ -35,7 +35,7 @@
   branch = "master"
   name = "github.com/ylck/find-tools"
   packages = ["cmd"]
-  revision = "7b37efefab4190d93d9efa56dfae7b26a0316e7c"
+  revision = "f84336ba4942f962923641a3989cf5e6b1affa0f"
 
 [[projects]]
   branch = "master"
@@ -50,7 +50,7 @@
     "unix",
     "windows"
   ]
-  revision = "bd9dbc187b6e1dacfdd2722a87e83093c2d7bd6e"
+  revision = "3dc4335d56c789b04b0ba99b7a37249d9b614314"
 
 [solve-meta]
   analyzer-name = "dep"
