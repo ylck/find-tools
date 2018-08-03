@@ -3,6 +3,7 @@ package cmd
 import (
 	"os"
 	"path/filepath"
+	"runtime"
 	"strings"
 
 	log "github.com/sirupsen/logrus"
@@ -44,7 +45,7 @@ func Run() {
 func copyfile(src_dir, tar_dir, suffix string) {
 	var listfile []string
 	//os.Getenv("dir")
-	ostype := os.Getenv("GOOS") // 获取系统类型
+	ostype := runtime.GOOS // 获取系统类型
 	if ostype == "windows" {
 		strRet = "\\"
 		log.Info("OS%s", ostype)

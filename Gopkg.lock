@@ -35,7 +35,7 @@
   branch = "master"
   name = "github.com/ylck/find-tools"
   packages = ["cmd"]
-  revision = "9bbbe82b3cf9dc4668477db587f22f405d5bf1d8"
+  revision = "7f8bce7efef080dd98db73ddd233be957178d810"
 
 [[projects]]
   branch = "master"
