@@ -10,8 +10,8 @@
 [[projects]]
   name = "github.com/sirupsen/logrus"
   packages = ["."]
-  revision = "3e01752db0189b9157070a0e1668a620f9a85da2"
-  version = "v1.0.6"
+  revision = "418b41d23a1bf978c06faea5313ba194650ac088"
+  version = "v0.8.7"
 
 [[projects]]
   name = "github.com/spf13/cobra"
@@ -35,22 +35,7 @@
   branch = "master"
   name = "github.com/ylck/find-tools"
   packages = ["cmd"]
-  revision = "7f8bce7efef080dd98db73ddd233be957178d810"
-
-[[projects]]
-  branch = "master"
-  name = "golang.org/x/crypto"
-  packages = ["ssh/terminal"]
-  revision = "c126467f60eb25f8f27e5a981f32a87e3965053f"
-
-[[projects]]
-  branch = "master"
-  name = "golang.org/x/sys"
-  packages = [
-    "unix",
-    "windows"
-  ]
-  revision = "3dc4335d56c789b04b0ba99b7a37249d9b614314"
+  revision = "6ca6fb18c2b503a88c98401e5bb87a44d9bc340e"
 
 [solve-meta]
   analyzer-name = "dep"

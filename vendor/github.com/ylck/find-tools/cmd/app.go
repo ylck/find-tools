@@ -3,6 +3,7 @@ package cmd
 import (
 	"os"
 	"path/filepath"
+	"runtime"
 	"strings"
 
 	log "github.com/sirupsen/logrus"
@@ -44,11 +45,13 @@ func Run() {
 func copyfile(src_dir, tar_dir, suffix string) {
 	var listfile []string
 	//os.Getenv("dir")
-	ostype := os.Getenv("GOOS") // 获取系统类型
+	ostype := runtime.GOOS // 获取系统类型
 	if ostype == "windows" {
 		strRet = "\\"
+		log.Info("OS%s", ostype)
 	} else if ostype == "linux" || ostype == "darwin" {
 		strRet = "/"
+		log.Info("OS%s", ostype)
 	}
 	filepath.Walk(src_dir, func(path string, info os.FileInfo, err error) error {
 		if info.IsDir() {
